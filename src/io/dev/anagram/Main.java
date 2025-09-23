@@ -34,7 +34,7 @@ public class Main {
                 //
                 // turn the numbers into a string:
                 // put all the numbers together with commas.
-                //    - the string we get is the “key” to find all words that are anagrams.
+                //    - the string we get is the key to find all words that are anagrams.
                 //    - now words with the same letters go in the same group.
                 //
                 // this should be faster than sorting because counting letters is quick and easy
@@ -59,7 +59,7 @@ public class Main {
 //                String key = new String(chars);
 
                 // add the original word to the list corresponding to its sorted key
-                mappedAnagrams.computeIfAbsent(key, _ -> new ArrayList<>()).add(word);
+                mappedAnagrams.computeIfAbsent(key, string -> new ArrayList<>()).add(word);
             }
         } catch (IOException e) {
             System.out.println("Failed to process " + inputFile + ". More info: " + e);
