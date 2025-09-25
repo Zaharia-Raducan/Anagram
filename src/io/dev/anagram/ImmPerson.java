@@ -14,10 +14,6 @@ public final class ImmPerson {
         this.attr = List.copyOf(attr);
     }
 
-    public static ImmPerson of(String name, int age, List<String> attr) {
-        return new ImmPerson(name, age, attr);
-    }
-
     public List<String> getAttr() {
         return this.attr;
     }
